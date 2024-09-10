@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+  <ion-grid class="custom-grid">
+    <ion-row class="first-row">
+      <ion-col size="12">
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="second-row">
+      <ion-col size="12">
+        <h2 class="style-text-login">Crear Cuenta</h2>
+        <p style="margin: 0; font-weight: 600;text-decoration: underline; color: black;">Datos personales</p>
+        
+        <ion-input label="Nombre" label-placement="floating" fill="outline" placeholder="Enter Nombre" class="custom" color="medium" type="text"></ion-input>
+        <ion-input label="Apellidos" label-placement="floating" fill="outline" placeholder="Enter Apellidos" class="custom" color="medium" type="text"></ion-input>
+        <ion-input label="+569" label-placement="fixed" fill="outline" placeholder="Ingrese número de teléfono" class="custom" color="medium" type="number"></ion-input>
+        <ion-button expand="block" class="style-btn-login" (click)="Registrarse()">Registrarse!</ion-button>
+        <p class="style-btn-registrate">Ya tienes una cuenta?
+          <ion-router-link routerLink="/login" class="style-login">
+            Inicia Sesión!
+          </ion-router-link>
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

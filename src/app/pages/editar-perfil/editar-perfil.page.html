@@ -1,0 +1,36 @@
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Editar Perfil</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-item>
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input type="text" placeholder="Nuevo nombre" name="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Apellidos</ion-label>
+        <ion-input type="text" placeholder="Nuevos apellidos" name="apellido"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="stacked">Telefono</ion-label>
+        <ion-input label="+569" label-placement="fixed"  placeholder="Nuevo teléfono"  color="medium" type="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Nueva contraseña</ion-label>
+        <ion-input type="password" placeholder="Nueva Contraseña" name="password"></ion-input>
+      </ion-item>
+
+      <ion-button (click)="ConfirmarCambios()" expand="block" class="style-btn-login">Confirmar Cambios</ion-button>
+      <p style="text-align: center;">or</p>
+      <ion-button (click)="Volver()" expand="block" class="style-btn-login">Volver a mi cuenta</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

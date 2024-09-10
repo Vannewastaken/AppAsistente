@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/inicio"
+        text="Inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Eventos
+    </ion-title>
+    
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-searchbar></ion-searchbar>
+
+  <h1 class="style-titulo">Eventos</h1>
+  
+  <ion-list>
+    <ion-item *ngFor="let item of items; let i = index" >
+      <ion-label >
+        <h2 style="font-weight: 600;">{{ item.nombre }}</h2>
+        <p class="style-label-p">{{ item.fecha }}</p>
+        <p class="style-label-p">{{ item.aforo }}</p>
+      </ion-label>
+      <ion-button [routerLink]="['/detalle-eventos']" (click)="abrirDetalle(item)" fill="solid" shape="round" slot="end">
+        Ver Detalle
+      </ion-button>
+      
+    </ion-item>
+    
+  </ion-list>
+  
+  
+  <ion-infinite-scroll threshold="200px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Cargando eventos...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

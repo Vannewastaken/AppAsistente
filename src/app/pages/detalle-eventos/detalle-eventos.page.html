@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/inicio"
+        text="Atrás"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles del Evento</ion-title>
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content *ngIf="selectedItem; else noItem">
+  <ion-card style="padding-top: 7%;">
+    <img 
+      alt="Silhouette of mountains" 
+      src="assets/evento1.png" 
+      style="display: block; margin: 0 auto; width: 100%; height: 150px; object-fit: cover;" 
+    />
+    <ion-card-header>
+      <ion-card-title style="color: black;">{{ selectedItem.nombre }}</ion-card-title>
+      <ion-card-subtitle style="color: #F5F4FE">Fecha: {{ selectedItem.fecha }}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content style="color: black;">
+      <p>Aforo: {{ selectedItem.aforo }}</p>
+      <p>Ubicación: av. tanto tanto Maipú</p>
+    </ion-card-content>
+  </ion-card>
+  
+  
+
+  <ion-button (click)="toggleRegistration()" class="custom" expand="block">
+    {{ isRegistered ? 'Cancelar Inscripción' : 'Inscribirse' }}
+  </ion-button>
+  
+  <p *ngIf="isRegistered" style="text-align: center; color: black;">or</p>
+  <ion-button *ngIf="isRegistered" [routerLink]="['/qrcode']" class="custom" expand="block">Ver QR</ion-button>
+  
+ 
+
+
+</ion-content>
+<ng-template #noItem>
+  <ion-content>
+    <p required style="color: black; margin-top: 80%;margin-left: 65px;">No hay detalles del evento seleccionados.</p>
+  </ion-content>
+</ng-template>
+

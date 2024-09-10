@@ -1,0 +1,36 @@
+
+<ion-content [fullscreen]="true">
+    <div class="contenedor">
+        <header class="header-style">
+           <ion-button  expand="block" fill="clear" shape="round" color="light" (click)="Inicio()">
+            <ion-icon slot="start" name="arrow-back-outline" style="color: white;"></ion-icon>
+            <p style="color: white;">Inicio</p>
+           </ion-button>
+        </header>
+        <ion-icon name="person-circle-outline" class="icon-style-account"></ion-icon>
+        <main class="main-style" style="text-align: center;">
+           <h1 style="color: black;">Valentina Cisterna Sobarzo</h1>
+           <p style="color: black;">21.717.528-3</p>
+
+               <ion-item>
+                   <ion-label>Email: Val.cisterna&#64;duocuc.cl</ion-label>
+                   <ion-icon slot="start" name="mail"></ion-icon>
+               </ion-item>
+               <ion-item>
+                   <ion-label>Teléfono: 988155885</ion-label>
+                   <ion-icon slot="start" name="call"></ion-icon>
+               </ion-item>
+               <ion-item>
+                   <ion-label>Fecha de nacimiento: 27/11/2004</ion-label>
+                   <ion-icon slot="start" name="calendar-number"></ion-icon>
+               </ion-item>
+
+               <ion-button size="block" class="btn-editarperfil" (click)="EditarPerfil()">
+                Editar perfil
+                <ion-icon slot="end" name="pencil"></ion-icon>
+              </ion-button>
+
+        </main>
+    </div>
+
+</ion-content>

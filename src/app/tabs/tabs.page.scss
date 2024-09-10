@@ -1,0 +1,17 @@
+ion-tab-bar{
+    --background: #064041;
+    --color: white;
+    --border-width:4px 0;
+    --border-style: double;
+    --min-height:80px;
+    --padding-top:20px;
+    --padding-bottom:20px;
+}
+ion-tab-button[aria-selected="true"]{
+    color: #6c264c;
+  }
+  
+
+  ion-tab-button:hover {
+    color: #6c264c;
+  }

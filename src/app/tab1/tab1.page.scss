@@ -1,0 +1,61 @@
+.contenedor {
+    display: grid;
+    grid-template-rows: 20% 1fr; /* Define el tamaño del header y el espacio restante para el main */
+    height: 100%;
+    position: relative;
+}
+
+ion-content {
+    --background: #064041;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.main-style {
+    grid-row: 2;
+    background-color: #f5f4fe;
+    padding: 7%;
+}
+
+/* Estilo para el header */
+.header-style {
+    grid-row: 1;
+    display: flex;
+    align-items: start; /* Centra verticalmente el contenido del header */
+    justify-content: flex-start; /* Alinea el contenido del header a la izquierda */
+    background-color: #064041;
+    padding: 3% 2%; /* Ajusta el padding según sea necesario */
+
+    
+}
+
+.icon-style-account {
+    color: #000000;
+    font-size: 21vw;
+    position: absolute;
+    top: calc(20%); /* Ajusta esto según la posición deseada entre el header y el main */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el icono tanto horizontal como verticalmente */
+}
+
+ion-item {
+    --background: transparent;
+    --color: #000000;
+    margin-top: 5%;
+  }
+
+  ion-button.btn-editarperfil {
+    --background: #866A80;
+    --background-hover: #c49cbb;
+    --background-activated: #c49cbb;
+    --background-focused: #c49cbb;
+    --color: #091e22;
+    --border-radius: 18px; 
+    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    margin-top: 11%;
+  }
+
+
